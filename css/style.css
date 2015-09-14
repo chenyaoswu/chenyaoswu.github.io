@@ -16,6 +16,12 @@ body:after {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'FangZhengXiTan';
+  src: url("fonts/XiTanHei.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body,
 div,
@@ -246,14 +252,14 @@ a {
 #container .left-col .overlay {
   width: 100%;
   height: 180px;
-  background-color: #000;
+  background: #434344;
   position: absolute;
-  opacity: 0.7;
 }
 #container .left-col .intrude-less {
   width: 76%;
   text-align: center;
   margin: 112px auto 0;
+  font-weight: bolder;
 }
 #container .mid-col {
   position: absolute;
@@ -471,7 +477,7 @@ a {
 .header-author {
   text-align: center;
   margin: 0.67em 0;
-  font-family: Roboto, "Roboto", serif;
+  font-family: FangZhengXiTan, "Roboto", serif;
   font-size: 30px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -595,7 +601,6 @@ a {
   *display: inline;
   text-indent: -9999px;
   margin: 0 8px 15px 8px;
-  opacity: 0.7;
   width: 28px;
   height: 28px;
   -webkit-transition: 0.3s;
@@ -610,13 +615,14 @@ a {
   margin-right: 0;
 }
 #header .header-nav .social a.weibo {
-  background: url("/img/weibo.png") center no-repeat #aaf;
-  border: 1px solid #aaf;
+  background: url("/img/weibo.png") center no-repeat #f5c7b7;
+  border: 1px solid #f5c7b7;
 }
 #header .header-nav .social a.weibo:hover {
-  border: 1px solid #aaf;
+  border: 1px solid #f5c7b7;
 }
 #header .header-nav .social a.rss {
+  opacity: 0.7;
   background: url("/img/rss.png") center no-repeat #ef7522;
   border: 1px solid #ef7522;
 }
@@ -661,6 +667,7 @@ a {
 #header .header-nav .social a.zhihu {
   background: url("/img/zhihu.png") center no-repeat #0078d8;
   border: 1px solid #0078d8;
+  opacity: 0.7;
 }
 #header .header-nav .social a.zhihu:hover {
   border: 1px solid #0078d8;
@@ -2075,10 +2082,10 @@ pre .css ~ * .id {
   border-right-color: #ff945c;
 }
 .tagcloud a.color2 {
-  background: #f5c7b7;
+  background: #444;
 }
 .tagcloud a.color2:before {
-  border-right-color: #f5c7b7;
+  border-right-color: #444;
 }
 .tagcloud a.color3 {
   background: #ba8f6c;
