@@ -252,7 +252,7 @@ a {
 #container .left-col .overlay {
   width: 100%;
   height: 180px;
-  background: #434344;
+  background: url("/img/bg1.jpg");
   position: absolute;
 }
 #container .left-col .intrude-less {
@@ -577,6 +577,13 @@ a {
   -moz-transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
+}
+#header .header-friends {
+  height: 150px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
 }
 #header .header-nav {
   width: 100%;
