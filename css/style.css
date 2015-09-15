@@ -2122,10 +2122,10 @@ pre .css ~ * .id {
   border-right-color: #cfb7c4;
 }
 .tagcloud a.color5 {
-  background: #7b5d5f;
+  background: #444;
 }
 .tagcloud a.color5:before {
-  border-right-color: #7b5d5f;
+  border-right-color: #444;
 }
 .article-tag-list .article-tag-list-item {
   float: left;
