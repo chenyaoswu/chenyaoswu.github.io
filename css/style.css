@@ -16,6 +16,12 @@ body:after {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'FangZhengXiTan';
+  src: url("fonts/fangzhengxitan1.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body,
 div,
@@ -173,9 +179,6 @@ a {
 }
 .alignright {
   float: right;
-}
-.clearfix {
-  *zoom: 1;
 }
 .clearfix:after {
   content: "";
