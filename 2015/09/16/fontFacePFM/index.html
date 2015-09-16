@@ -3,25 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>知乎回答：目前流行的前端框架有哪些？ | 陈小二的Blog</title>
+  <title>Font-Face 性能优化 | 陈小二的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;知乎回答链接：目前流行的前端框架有哪些？
-&amp;emsp;&amp;emsp;借鉴前端工程——基础篇文章里的内容，觉着科普的蛮好的，对我这样的初级蛮受用。刚好所用的图片里都差不多覆盖了一些常用的东西，直接拿来贴了。">
+  <meta name="description" content="&amp;emsp;&amp;emsp;这两天因为一直在优化博客，希望自己博客的体验更好一点，所以在个人昵称处利用font-face导入了其他的字体，效果可见图。但是使用font-face后页面加载的速度变慢，在手机端页面常出现：即使已经将页面的文字渲染，但仍然会出现浏览器未加载完的效果，而我也不希望因为性能的原因舍弃字体，所以尝试了一些方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="知乎回答：目前流行的前端框架有哪些？">
-<meta property="og:url" content="http:chenyaoswu.github.io/2015/09/14/frameZhihu/index.html">
+<meta property="og:title" content="Font-Face 性能优化">
+<meta property="og:url" content="http:chenyaoswu.github.io/2015/09/16/fontFacePFM/index.html">
 <meta property="og:site_name" content="陈小二的Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;知乎回答链接：目前流行的前端框架有哪些？
-&amp;emsp;&amp;emsp;借鉴前端工程——基础篇文章里的内容，觉着科普的蛮好的，对我这样的初级蛮受用。刚好所用的图片里都差不多覆盖了一些常用的东西，直接拿来贴了。">
-<meta property="og:image" content="http://lib.wuedc.com/uploadimg/uploadimg/1442219872.jpg">
-<meta property="og:image" content="http://lib.wuedc.com/uploadimg/uploadimg/1442220078.jpg">
-<meta property="og:image" content="http://lib.wuedc.com/uploadimg/uploadimg/1442220175.jpg">
-<meta property="og:image" content="http://lib.wuedc.com/uploadimg/uploadimg/1442219725.jpg">
-<meta property="og:updated_time" content="2015-09-15T03:42:54.000Z">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;这两天因为一直在优化博客，希望自己博客的体验更好一点，所以在个人昵称处利用font-face导入了其他的字体，效果可见图。但是使用font-face后页面加载的速度变慢，在手机端页面常出现：即使已经将页面的文字渲染，但仍然会出现浏览器未加载完的效果，而我也不希望因为性能的原因舍弃字体，所以尝试了一些方法。">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/66ca7da9jw1ew4cf9bpgij21880mgtcy.jpg">
+<meta property="og:updated_time" content="2015-09-16T09:04:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="知乎回答：目前流行的前端框架有哪些？">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;知乎回答链接：目前流行的前端框架有哪些？
-&amp;emsp;&amp;emsp;借鉴前端工程——基础篇文章里的内容，觉着科普的蛮好的，对我这样的初级蛮受用。刚好所用的图片里都差不多覆盖了一些常用的东西，直接拿来贴了。">
+<meta name="twitter:title" content="Font-Face 性能优化">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;这两天因为一直在优化博客，希望自己博客的体验更好一点，所以在个人昵称处利用font-face导入了其他的字体，效果可见图。但是使用font-face后页面加载的速度变慢，在手机端页面常出现：即使已经将页面的文字渲染，但仍然会出现浏览器未加载完的效果，而我也不希望因为性能的原因舍弃字体，所以尝试了一些方法。">
   
     <link rel="alternative" href="/atom.xml" title="陈小二的Blog" type="application/atom+xml">
   
@@ -213,11 +207,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-frameZhihu" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-fontFacePFM" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/09/14/frameZhihu/" class="article-date">
-  	<time datetime="2015-09-14T08:21:47.000Z" itemprop="datePublished">2015-09-14</time>
+      <a href="/2015/09/16/fontFacePFM/" class="article-date">
+  	<time datetime="2015-09-16T08:09:43.000Z" itemprop="datePublished">2015-09-16</time>
 </a>
     </div>
   
@@ -230,7 +224,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      知乎回答：目前流行的前端框架有哪些？
+      Font-Face 性能优化
     </h1>
   
 
@@ -238,10 +232,6 @@
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知乎回答/">知乎回答</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -250,21 +240,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;知乎回答链接：<a href="http://www.zhihu.com/question/35069742/answer/61266413" target="_blank" rel="external">目前流行的前端框架有哪些？</a></p>
-<p>&emsp;&emsp;借鉴<a href="http://div.io/topic/1275" target="_blank" rel="external">前端工程——基础篇</a>文章里的内容，觉着科普的蛮好的，对我这样的初级蛮受用。刚好所用的图片里都差不多覆盖了一些常用的东西，直接拿来贴了。<br><a id="more"></a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.库/框架选型：</p>
-<p><img src="http://lib.wuedc.com/uploadimg/uploadimg/1442219872.jpg" alt="image"></p>
-<p>&emsp;&emsp;&emsp;图中的也有一些没用过，中小型pc端项目的话在做技术选型时会多去尝试未用过的，这样可以快速去实践新东西。pc端会使用jquery做一些效果处理，移动端一般用zepto，更轻便一些，更多的一些js的处理会用underscore，常用的图标会使用Font Awesome。react最近蛮火的，像 @onionBob 所说只是view这一层，所以facebook也提出了 flux来作为一套完整的解决方案。vue.js 也有在用，能从@勾三股四 的微博看出来他们都在推这些，我们团队也已经在用。</p>
-<p><img src="http://lib.wuedc.com/uploadimg/uploadimg/1442220078.jpg" alt="image"></p>
-<p>&emsp;&emsp;个人现在的态度便是在自己的项目中尝试很多新东西，嗯，初生牛犊不怕虎。</p>
-<p>&emsp;&emsp;2.前端工程构建工具的话：gulp 和grunt ,个人比较喜欢 gulp，简单粗暴。</p>
-<p><img src="http://lib.wuedc.com/uploadimg/uploadimg/1442220175.jpg" alt="image"></p>
-<p>&emsp;&emsp;3.JS/CSS模块化开发</p>
-<p>&emsp;&emsp;模块化Amd和Cmd其实用哪个都无所谓，自己熟练哪个就好，大家也都还在继续使用，但是～前端的发展真的蛮快的，玉伯也在自己微博上贴出了否定的态度：</p>
-<p><img src="http://lib.wuedc.com/uploadimg/uploadimg/1442219725.jpg" alt="image"></p>
-<p>&emsp;&emsp;有评论给出的解释是：<br>&emsp;&emsp;&emsp;&emsp;@春江一条小鱼：库和框架是对标准的一种扩展与补充。ECMAScript 6 + 出来后，很多功能在标准下能实现了，于是…</p>
-<p>&emsp;&emsp;其他的有用过webpack，比较推荐，嗯，理由也是简单粗暴，好使。</p>
-<p>&emsp;&emsp;其实，很多东西也还是一知半解，慢慢来吧～</p>
+        <p>&emsp;&emsp;这两天因为一直在优化博客，希望自己博客的体验更好一点，所以在个人昵称处利用font-face导入了其他的字体，效果可见图。但是使用font-face后页面加载的速度变慢，在手机端页面常出现：即使已经将页面的文字渲染，但仍然会出现浏览器未加载完的效果，而我也不希望因为性能的原因舍弃字体，所以尝试了一些方法。<br><a id="more"></a></p>
+<p><img src="http://ww2.sinaimg.cn/mw690/66ca7da9jw1ew4cf9bpgij21880mgtcy.jpg" alt=""></p>
+<p>&emsp;&emsp;1.<a href="http://www.stevesouders.com/blog/2009/10/13/font-face-and-performance/" target="_blank" rel="external">@font-face and performance</a>中建议在页面全部加载完毕后再下载字体文件，这样浏览器不会显示出忙的状态，代码大致如下：</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">lazyload</span><span class="params">()</span> &#123;</span></span><br><span class="line">	var sRule1 =</span><br><span class="line">		<span class="string">"@font-face &#123;"</span> +</span><br><span class="line">		<span class="string">"  font-family: '</span><span class="transposed_variable">Yanone'</span>;<span class="string">" +</span><br><span class="line">		"</span>  src: url(<span class="string">'/bin/resource.cgi?type=font&amp;sleep=6'</span>);<span class="string">" +</span><br><span class="line">		"</span>  src: local(<span class="string">'Yanone'</span>), <span class="string">" +</span><br><span class="line">                "</span>url(<span class="string">'/bin/resource.cgi?type=font&amp;sleep=6'</span>) <span class="string">" +</span><br><span class="line">                "</span>format(<span class="string">'truetype'</span>);<span class="string">" +</span><br><span class="line">		"</span>&#125;<span class="string">";</span><br><span class="line"></span><br><span class="line">	var style1 = document.styleSheets[0];</span><br><span class="line">	if ( "</span><span class="function"><span class="keyword">function</span>" === <span class="title">typeof</span><span class="params">(style1.insertRule)</span> ) &#123;</span></span><br><span class="line">		<span class="comment">// Firefox, Safari, Chrome</span></span><br><span class="line">		<span class="transposed_variable">style1.</span>insertRule(sRule1, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> ( <span class="string">"string"</span> === typeof(<span class="transposed_variable">style1.</span>cssText) ) &#123;</span><br><span class="line">		<span class="comment">// IE</span></span><br><span class="line">		<span class="transposed_variable">style1.</span>cssText = sRule1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;但是使用这个方法以后 页面刚渲染完成时显示为本地字体，此时下载字体文件，重新渲染时，文字会出现一段空白时间，具体效果可参见博客作者写的<a href="http://www.stevesouders.com/tests/font-face/lazyload.php?t=1442391775" target="_blank" rel="external">fontTest</a>中的lazy load Test,所以这样的方法我并不建议。</p>
+<p>&emsp;&emsp;2.使用缓存，缓存的方法在首次进入博客时字体文件的加载依然会很慢，但有利于后续的访问。（鉴于像我们这种并留不住用户的博客并不太使用，所以并没有选择。）</p>
+<p>&emsp;&emsp;3.将字体进行base64编码后，存放于CSS文件中，有利自然是减少请求。</p>
+<p>&emsp;&emsp;我最终选择通过<a href="http://ecomfe.github.io/fontmin/" target="_blank" rel="external">Fontmin</a>导入需要的字体，输入我需要的文字，生成小字库再去引用，所以折腾了这么久，为什么不早用这方法－－。</p>
+<p><br></p>
+<p>工具推荐：<br><a href="http://efe.baidu.com/blog/chinese-font-build/" target="_blank" rel="external">中文字体 webfont 自动化构建</a><br><a href="https://github.com/ecomfe/fontmin" target="_blank" rel="external">fontmin 第一个纯 JS 字体解决方案</a></p>
+<p>致谢：<br>    <a href="http://www.cnblogs.com/demix/archive/2009/11/28/1612715.html" target="_blank" rel="external">font-face与性能</a>（中文版）<br>    <a href="http://www.stevesouders.com/blog/2009/10/13/font-face-and-performance/" target="_blank" rel="external">@font-face and performance</a>（英文版）</p>
 
       
     </div>
@@ -274,18 +260,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/16/fontFacePFM/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Font-Face 性能优化
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/09/13/helloworld/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hello,World!</div>
+    <a href="/2015/09/14/frameZhihu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">知乎回答：目前流行的前端框架有哪些？</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -314,7 +291,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="frameZhihu" data-title="知乎回答：目前流行的前端框架有哪些？" data-url="http:chenyaoswu.github.io/2015/09/14/frameZhihu/"></div>
+	<div class="ds-thread" data-thread-key="fontFacePFM" data-title="Font-Face 性能优化" data-url="http:chenyaoswu.github.io/2015/09/16/fontFacePFM/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
