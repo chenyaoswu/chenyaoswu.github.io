@@ -16,12 +16,6 @@ body:after {
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'FangZhengXiTan';
-  src: url("fonts/fangzhengxitan.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
 html,
 body,
 div,
