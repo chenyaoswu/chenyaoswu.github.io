@@ -2098,7 +2098,7 @@ pre .css ~ * .id {
   background: #444;
 }
 .tagcloud a.color1:before {
-  border-right-color: #ff945c;
+  border-right-color: #444;
 }
 .tagcloud a.color2 {
   background: #444;
@@ -2110,13 +2110,13 @@ pre .css ~ * .id {
   background: #444;
 }
 .tagcloud a.color3:before {
-  border-right-color: #ba8f6c;
+  border-right-color: #444;
 }
 .tagcloud a.color4 {
   background: #444;
 }
 .tagcloud a.color4:before {
-  border-right-color: #cfb7c4;
+  border-right-color: #444;
 }
 .tagcloud a.color5 {
   background: #444;
