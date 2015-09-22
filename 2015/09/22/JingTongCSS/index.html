@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>陈小二的Blog</title>
+  <title>精通CSS关于布局的笔记 | 陈小二的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端 博客 Font-Face 性能">
-<meta property="og:type" content="website">
-<meta property="og:title" content="陈小二的Blog">
-<meta property="og:url" content="http:chenyaoswu.github.io/index.html">
+  <meta name="description" content="粗略的看了一些章节，纪录了一些之前写布局时候不大注意的小地方。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="精通CSS关于布局的笔记">
+<meta property="og:url" content="http:chenyaoswu.github.io/2015/09/22/JingTongCSS/index.html">
 <meta property="og:site_name" content="陈小二的Blog">
-<meta property="og:description" content="前端 博客 Font-Face 性能">
+<meta property="og:description" content="粗略的看了一些章节，纪录了一些之前写布局时候不大注意的小地方。">
+<meta property="og:updated_time" content="2015-09-22T08:29:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈小二的Blog">
-<meta name="twitter:description" content="前端 博客 Font-Face 性能">
+<meta name="twitter:title" content="精通CSS关于布局的笔记">
+<meta name="twitter:description" content="粗略的看了一些章节，纪录了一些之前写布局时候不大注意的小地方。">
   
     <link rel="alternative" href="/atom.xml" title="陈小二的Blog" type="application/atom+xml">
   
@@ -213,9 +214,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-JingTongCSS" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JingTongCSS" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/09/22/JingTongCSS/" class="article-date">
@@ -231,288 +230,103 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/22/JingTongCSS/">精通CSS关于布局的笔记</a>
+    <h1 class="article-title" itemprop="name">
+      精通CSS关于布局的笔记
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>粗略的看了一些章节，纪录了一些之前写布局时候不大注意的小地方。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li></ul>
 	</div>
 
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/09/22/JingTongCSS/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-RemAndEm" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/22/RemAndEm/" class="article-date">
-  	<time datetime="2015-09-22T08:07:32.000Z" itemprop="datePublished">2015-09-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/22/RemAndEm/">rem,em笔记</a>
-    </h1>
-  
 
-      </header>
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>rem与em类似，但rem相对于其根元素<html>，em相对于父元素，使用em时需要知道其父级的em大小，所以更推荐使用rem。<br>em是相对于元素父元素的font-size（直系父级），若浏览器默认字体大小为16px,1em等于16px;“0.5em = 8px”。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li></ul>
-	</div>
+<p>粗略的看了一些章节，纪录了一些之前写布局时候不大注意的小地方。<br><a id="more"></a></p>
+<blockquote>
+<ul>
+<li>两列布局或者延伸到各多列布局时的注意点</li>
+<li>使用faux列实现等列布局</li>
+<li>使用CSS3 column-count实现文本等列布局</li>
+</ul>
+</blockquote>
+<h2 id="两列布局">两列布局</h2><p>1.使用浮动布局时，使两列分别左浮动和右浮动，中间建立隔离带（留有一些空间），避免元素同时左浮动或者右浮动，否则在IE的低版本中，会出现因为当元素内容增大时，整个元素拓展，没有足够的空间让元素并排出现，某个元素会退到下一行。<br>2.在所有浮动元素中设置display:inline,防止IE的双外边距浮动产生的bug。<br>3.浮动时两个内容块已经脱离文档流，需对其父元素清楚浮动，对父元素设置overflow:hidden.  引申：<a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank" rel="external">那些年我们清除过的浮动</a></p>
+<h3 id="固定宽度布局：">固定宽度布局：</h3><p>无论窗口的尺寸大小，页面的固定宽带不变。当窗口大小改变时，对文字以及布局的彼影响较大，不建议使用。</p>
+<h3 id="流式布局">流式布局</h3><p>通过百分数随着窗口的大小去改变宽度。<br>缺点：在大分辨率显示器上，行仍然会过长，在小窗口中，行会特别短，内容零碎。</p>
+<h3 id="弹性布局：">弹性布局：</h3><p>以字号来设置元素的宽度，确保在字号较大时也随着布局增大。<br>浏览器的默认字体大小一般为16px，相对px去设置rem,不建议使用em，em相对于父元素，ren相对于根元素，更方便。<br><strong>建议：</strong><br>    内部宽度仍然适用百分数，以rem为单位设置容器的宽度。</p>
+<h3 id="等列布局：">等列布局：</h3><p>1.利用faux列设置垂直重复的背景图片<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url</span>(<span class="string">''</span>) repeat-y left top</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>举例：<a href="http://codepen.io/anon/pen/dYXqdL?editors=110" target="_blank" rel="external">fauz列  背景平铺设置</a><br>2.利用CSS3的column-count(文本分列数)、column-width,column-gap（文本列间隔）、 column-rule（列之间的宽度、样式和颜色规则）设置等高文本列.</p>
+<p>举例：<a href="http://www.w3school.com.cn/tiy/t.asp?f=css3_column-count" target="_blank" rel="external">css3 column-count  文本分列</a></p>
 
       
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/09/22/RemAndEm/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/09/22/RemAndEm/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">rem,em笔记</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-fontFacePFM" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/16/fontFacePFM/" class="article-date">
-  	<time datetime="2015-09-16T08:09:43.000Z" itemprop="datePublished">2015-09-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/16/fontFacePFM/">Font-Face 性能优化</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&emsp;&emsp;这两天因为一直在优化博客，希望自己博客的体验更好一点，所以在个人昵称处利用font-face导入了其他的字体，效果可见图。但是使用font-face后页面加载的速度变慢，在手机端页面常出现：即使已经将页面的文字渲染，但仍然会出现浏览器未加载完的效果，而我也不希望因为性能的原因舍弃字体，所以尝试了一些方法。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Font-Face-性能/">Font-Face  性能</a></li></ul>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/09/16/fontFacePFM/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
-
-
-
-
-  
-    <article id="post-frameZhihu" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/14/frameZhihu/" class="article-date">
-  	<time datetime="2015-09-14T08:21:47.000Z" itemprop="datePublished">2015-09-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/14/frameZhihu/">知乎回答：目前流行的前端框架有哪些？</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>&emsp;&emsp;知乎回答链接：<a href="http://www.zhihu.com/question/35069742/answer/61266413">目前流行的前端框架有哪些？</a></p>
-<p>&emsp;&emsp;借鉴<a href="http://div.io/topic/1275">前端工程——基础篇</a>文章里的内容，觉着科普的蛮好的，对我这样的初级蛮受用。刚好所用的图片里都差不多覆盖了一些常用的东西，直接拿来贴了。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知乎回答/">知乎回答</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/09/14/frameZhihu/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JingTongCSS" data-title="精通CSS关于布局的笔记" data-url="http:chenyaoswu.github.io/2015/09/22/JingTongCSS/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"chenyaoswu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-  
-    <article id="post-helloworld" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/13/helloworld/" class="article-date">
-  	<time datetime="2015-09-13T13:02:02.000Z" itemprop="datePublished">2015-09-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/13/helloworld/">hello,World!</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>搭建的原因，自然是为了纪录一些东西，自从工作以后，时间过的越来越快，很多时候，来不及思考，下一件事儿又迎面扑来。也许，静下来写博客的同时，我能想起来，谁还欠我几毛钱～</p>
-<p>工科生的文字，自然是连文风的影子都看不见的，说不定你还能从中闻出四川辣子鸡丁的味道，所以也不妨透露我是一个会做水煮牛肉的程序员。</p>
-<p>所以，说了这么多，</p>
-<p>如果，你也有博客，欢迎友情链接～</p>
-<p>如果，你有想说的，想讨论的，可以留言～</p>
-<p>如果，你正好也喜欢我，也不妨碍表个白，再给我发个大红包～或者直接发红包！</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello-World/">hello World</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -536,8 +350,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
